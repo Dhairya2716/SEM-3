@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("Enter a number : "));
+        let d1;
+        let d2;
+        let d3;
+        let d = 0;
+        let n = 0;
+        let temp = 0;
+        while(a>0){
+            temp = a%10;
+            a = a/10;
+            n++;
+        }
+        document.write("Temp is : "+temp);
+        document.write("<br/>"+"N is : "+n);
+        document.write("<br/>"+"a is : "+a);
+        if(n==1){
+            if(a==0){
+                document.write("Zero");
+            }
+            if(a==1){
+                document.write("One");
+            }
+        }
+        // else if(n==2){}
+        // else if(n==3){}
+        else{
+            document.write("invalid");
+        }
+    </script>
+</body>
+</html>
