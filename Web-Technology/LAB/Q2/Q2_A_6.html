@@ -6,35 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let a = Number(prompt("Enter a number : "));
-        let d1;
-        let d2;
-        let d3;
-        let d = 0;
-        let n = 0;
-        let temp = 0;
-        while(a>0){
-            temp = a%10;
-            a = a/10;
-            n++;
+   <script>
+    let a = prompt("Enter a number ");
+    var b = '';
+    if(a == null || a == ''){
+        document.write("value is null");
+    }
+    else if(isNaN(a)){
+        document.write("Not a number");
+    }
+   else if(a<0 || a>999){
+        document.write("Out of range");
+    }
+    else{
+        var ones = ['zero','one','two','three','four','five','six','seven','eight','nine'];
+        var teens = ['Ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+        var tens = ['','','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety'];
+        // 172
+        if(a>=100){
+            b += ones[Math.floor(a/100)]+' hundred ';
+            a%=100;
         }
-        document.write("Temp is : "+temp);
-        document.write("<br/>"+"N is : "+n);
-        document.write("<br/>"+"a is : "+a);
-        if(n==1){
-            if(a==0){
-                document.write("Zero");
-            }
-            if(a==1){
-                document.write("One");
-            }
+        if(a>=20){
+            b += tens[Math.floor(a/10)];
+            a%=10;
         }
-        // else if(n==2){}
-        // else if(n==3){}
-        else{
-            document.write("invalid");
+        if(a>10){
+            b += teens[a-10];
+            a=0;
         }
-    </script>
+        if(a<10){
+            b += ones[a];
+        }
+        alert("Number is "+b);
+    }
+   </script>
 </body>
 </html>
