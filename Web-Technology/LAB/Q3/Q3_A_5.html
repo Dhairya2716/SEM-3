@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter a String to locate it's index : ");
+        let b = ['My','Name','is','kapu'];
+        for(let i = 0;i<b.length;i++){
+            if(b[i] === a){
+                document.write(`The index of ${a} is ${i}`);
+                break;
+                }
+            else if(i === b.length - 1){
+                    document.write(`The string ${a} is not found in the array`);
+            }
+        }
+    </script>
+</body>
+</html>
