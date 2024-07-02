@@ -8,6 +8,7 @@ public class A_33{
         int b = sc.nextInt();
         System.out.println("Orignal number is "+a+" , "+b);
         swap(a,b);
+        sc.close();
     }
     public static void swap(int a,int b){
         int temp;
