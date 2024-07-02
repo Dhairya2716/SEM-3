@@ -74,7 +74,7 @@
         <input type="text" placeholder="0" id="input">
         <div>
             <button class="operator" onclick="clr()">CE</button>
-            <button class="operator" onclick="value">C</button>
+            <button class="operator" onclick="clr2()">C</button>
             <button class="operator" onclick="disp('%')">%</button>
             <button class="operator" onclick="disp('/')">/</button>
         </div>
@@ -116,6 +116,9 @@
             var x = document.getElementById("input").value;
             var y = eval(x);
             document.getElementById("input").value = y;
+        }
+        function clr2(){
+            document.getElementById("input").value = document.getElementById("input").value.slice(0,document.getElementById("input").value.length-1);
         }
     </script>
 </body>
