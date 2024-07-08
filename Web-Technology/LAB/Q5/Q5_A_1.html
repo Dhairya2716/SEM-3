@@ -118,7 +118,8 @@
             document.getElementById("input").value = y;
         }
         function clr2(){
-            document.getElementById("input").value = document.getElementById("input").value.slice(0,document.getElementById("input").value.length-1);
+            // document.getElementById("input").value = document.getElementById("input").value.slice(0,document.getElementById("input").value.length-1);
+            document.getElementById("input").value =  (input.value).substring(0,(input.value).length-1);
         }
     </script>
 </body>
