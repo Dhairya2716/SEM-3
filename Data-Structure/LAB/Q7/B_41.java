@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Stack;
 class B_41{
 public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<Character>();
@@ -12,7 +13,7 @@ public static boolean isValid(String s) {
                 else return false;
             }
         }
-        return st.isEmpty();
+        return stack.isEmpty();
     }
 
  public static void main (String[] args) {

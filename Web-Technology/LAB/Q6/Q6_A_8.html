@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <h1 id="heading" onmousemove="(()=>{
+                   a = document.getElementById('heading')
+                   a.style.color = 'red' 
+                })()" onmouseout="(()=>{
+                   a = document.getElementById('heading')
+                   a.style.color = 'black' 
+                })()" >
+                    Heading
+                </h1>
+            </td>
+            <td>
+                <h1>
+                   <button id="date" onclick="(()=>{
+                    let b = new Date();
+                    document.write(b);
+                })()">Date</button>
+                </h1>
+            </td>
+            <td>
+                <h1>
+                   <button id="red" onclick="(()=>{
+                    c = document.getElementById('red')
+                    c.body.background = 'red'
+                })()">Red</button>
+                </h1>
+            </td>
+            <td>
+                <h1>
+                   <button id="date" onclick="(()=>{
+                    let b = new Date();
+                    document.write(b);
+                })()">Date</button>
+                </h1>
+            </td>
+        </tr>
+        
+</table>
+    <script>
+
+    </script>
+</body>
+</html>
