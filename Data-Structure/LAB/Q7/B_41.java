@@ -7,10 +7,16 @@ public static boolean isValid(String s) {
             if (it == '(' || it == '[' || it == '{')
                 stack.push(it);
             else {
-                if(stack.isEmpty()) return false;
+                if(stack.isEmpty()){
+                    return false;
+                }
                 char ch = stack.pop(); 
-                if((it == ')' && ch == '(') ||  (it == ']' && ch == '[') || (it == '}' && ch == '{')) continue;
-                else return false;
+                if((it == ')' && ch == '(') ||  (it == ']' && ch == '[') || (it == '}' && ch == '{')){ 
+                    continue;
+                }
+                else{
+                    return false;
+                }
             }
         }
         return stack.isEmpty();

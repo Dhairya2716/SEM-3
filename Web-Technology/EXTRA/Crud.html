@@ -1,0 +1,59 @@
+<!-- Crud operation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Enter text">
+        <button id="add_edit" onclick="addEdit()">Add</button>
+    </div>
+    <div id="displayarea"></div>
+    <script>
+       const btn1 = document.getElementById("add_edit");
+       btn1.innerHTML = "Add";
+        let arr = [];
+        var index;
+
+        function addEdit(){
+           if(btn1.innerHTML == "Add"){
+                arr.push(document.getElementById("name").value);
+                document.getElementById("name").value = "";
+                display();
+           }
+           else{
+                let name = document.getElementById("name");
+                arr[index] = name.value;
+                document.getElementById("name").value = "";
+                display();
+                btn1.innerHTML = "Add";
+           }
+        }
+
+        function edit(i){
+            let name = document.getElementById("name");
+            name.value = arr[i];
+            btn1.innerHTML = "Edit";
+            index = i;
+        }
+        function del(){
+                arr.splice(index, 1);
+                display();
+        }
+
+        function display(){
+            let dis = document.getElementById("displayarea");
+            let html = "";
+            for(let i = 0; i < arr.length; i++){
+                html += arr[i] + 
+                "<button onclick='edit(" + i + ")'>Edit</button>" + 
+                "<button onclick='del(" + i + ")'>Delete</button><br>";
+            }
+            dis.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

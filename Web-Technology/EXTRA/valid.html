@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-bottom: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            align-content: center;
+            background-color: #329F5B;
+            z-index: 1;
+        }
+        /* .frm{
+            border: 1px solid #717377;
+            padding: 20px;
+            border-radius: 16px;
+            background-color: transparent;
+            box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+        } */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            background-color: #333333;
+            z-index: 3;
+        }
+        div + div {
+            margin-top: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: .5em;
+            color: #333333;
+        }
+        input {
+            border: 1px solid #ccc;
+            padding: .5em;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 1em;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: .3em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="frm">
+        <div>
+            Username : <input type="text" placeholder="Username" id="name" |>
+        </div>
+        <div>
+            Enrollment number : <input type="number" placeholder="Enrollment number" id="Enroll">
+        </div>
+        <div>
+            Password : <input type="password" placeholder="Password" id="pass">
+        </div>
+        <div>
+            Confirm password : <input type="password" placeholder="cfm-pass" id="cfm-pass">
+        </div>
+        <div>
+            Age : <input type="number" placeholder="your age" id="age">
+        </div>
+        <div>
+            Email : <input type="email" placeholder="Email id" id="email">
+        </div>
+        <div>
+            <button onclick="validation()">Submit</button>
+        </div>
+    </div>
+    </form>
+    <script>
+        let a = document.getElementById('name');
+        let b = document.getElementById('Enroll');
+        let c = document.getElementById('pass');
+        let d = document.getElementById('cfm-pass');
+        let e = document.getElementById('age');
+        let f = document.getElementById('email');
+        let g = document.getElementById('frm');
+        let h = document.getElementById('submit');
+        let i = document.getElementById('reset');
+        let username = /^[a-zA-Z0-9]{8,12}$/;
+        let enroll = /^2301[0-9]{7}$/;
+        let pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/;
+        let cfm_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/;
+        let age = /^[0-9]{1,2}$/;
+        let email = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9]{5,10})+\.[a-zA-Z]{2,3}$/
+
+        function validation(){
+        if(!username.test(a.value)){
+            a.style.border = "1px solid green";
+            a.style.backgroundColor = "yellow";
+        }
+        if(!enroll.test(b.value)){
+            b.style.border = "1px solid green";
+            b.style.backgroundColor = "blue";
+        }
+        if(!pass.test(c.value)){
+            c.style.border = "1px solid green";
+            c.style.backgroundColor = "red";
+        }
+        if(pass != cfm_pass){
+           alert("Password and confirm password are not same");
+        }
+        if(!email.test(f.value)){
+            f.style.border = "red";
+            f.style.backgroundColor = "orange";
+        }
+    }
+    </script>
+</body>
+</html>

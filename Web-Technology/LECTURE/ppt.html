@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        Red Alert !!!!
+    </div>
+    <script>
+        var objDiv = document.getElementById("myDiv");
+        var colors = ['white','yellow','orange','blue'];
+        var nextcolor = 0;
+        setInterval("objDiv.style.backgroundColor = colors[nextcolor++%colors.length];",1000);
+    </script>
+</body>
+</html>
