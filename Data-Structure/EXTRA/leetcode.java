@@ -1,7 +1,4 @@
-// HAPPY NUMBER
-
-
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * leetcode
@@ -9,20 +6,14 @@ import java.util.Scanner;
 public class leetcode {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number : ");
-        int n = sc.nextInt();
-        // n = 19
-        int sum = 0;
-        double remainder = 0;
-        int temp = n;
-          
-            while(temp!=0){
-                remainder = temp%10;
-                sum += Math.pow(remainder,2);
-                temp /= 10; 
+        int[] nums = {1, 2, 1, 2, 5};
+        int n =  nums.length;
+        for(int i = 0;i < n ;i++){
+            for(int j = i+1;j<n;j++){
+                if(nums[i] == nums[j]){
+                    System.out.println();
+                }
             }
-        System.out.println("Sum is : "+sum);
-        sc.close();
+        }
     }
 }
