@@ -1,7 +1,5 @@
 import java.util.*;
 import java.util.Stack;
-import java.lang.*;
-import java.io.*;
 
 class reversevowel
 {

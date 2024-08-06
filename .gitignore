@@ -1,0 +1,10 @@
+*.class
+*.txt
+*.bin
+*.jpeg
+*.png
+/Web-Technology/EXTRA
+/Web-Technology/LECTURE  
+/Web-Technology/LAB/Q19/node_modules
+/Data-Structure/LECTURE
+*.json

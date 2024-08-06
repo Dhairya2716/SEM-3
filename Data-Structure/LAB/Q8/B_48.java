@@ -1,7 +1,8 @@
 import java.util.Stack;
 import java.util.Scanner;
 
-public class A_47{
+
+public class B_48{
 
     public static int evaluatepostfix(String str){
         
@@ -37,7 +38,7 @@ public class A_47{
                 }
             }
         }
-        
+        // pop the operator use in this switch case
         return st.pop();
     }
 

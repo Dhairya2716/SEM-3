@@ -8,6 +8,11 @@ let winner = document.querySelector("#winner");
 let turnO = true;
 let count = 0;
 
+// let start = document.querySelector('.start');
+
+// function start(){
+    
+// }
 
 // using 2D array
 const WinPattern = [
