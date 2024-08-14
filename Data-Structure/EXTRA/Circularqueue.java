@@ -44,6 +44,7 @@ public class Circularqueue {
     public static void main(String[] args){
         Circularqueue q = new Circularqueue(5);
         q.cirenqueue(1);
+        q.cirenqueue(15);
         while(!q.isEmpty()){
             System.out.print(q.peek()+" ");
             q.cirdequeue();

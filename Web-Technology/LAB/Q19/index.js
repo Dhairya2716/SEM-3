@@ -6,12 +6,12 @@ const arr = [
     {
         id: 1,
         name: "Arjun Sir",
-        age: 72
+        age: 150
     },
     {
         id: 2,
         name: "Karan",
-        age: 18
+        age: 100
     },
     {
         id: 3,
@@ -36,6 +36,25 @@ app.get('/home/:id',(req,res) => {
         }
     }));
 });
+
+app.post('/about/:id', (req, res) => {
+    const newObject = {
+      id: req.params.id,
+      name: req.body.name,
+      age: req.body.age
+    };
+    arr.push(newObject);
+    res.json(newObject);
+  });
+  
+
+app.patch('/home/:id',(req,res)=>{
+    const idtoupdate = arr.find((ar)=>{
+        if(ar.id==req.params.id){
+            return true;
+        }
+    })
+})
 
 app.listen(3000,()=>{
     console.log("server started");
