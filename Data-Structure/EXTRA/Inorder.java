@@ -11,7 +11,7 @@ class Node {
 public class Inorder {
     static void inorder(Node node) {
       
-        if (node == null){
+        if (node==null){
             return;
         }
         inorder(node.left);

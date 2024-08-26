@@ -25,7 +25,6 @@ class Queueoperation{
 
 public class enque {
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Queueoperation q1 = new Queueoperation();
@@ -33,6 +32,7 @@ public class enque {
         while(ch!="n"){
             System.out.println("Want to add:");
             ch=sc.next();
+            
             if(ch.equals("y")){
                 System.out.println("Enter value to add:");
                 int x=sc.nextInt();

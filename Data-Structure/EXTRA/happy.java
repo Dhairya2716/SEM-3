@@ -5,7 +5,7 @@ public class happy {
         int sum = 0;
         while (sum != 1) {
             do {
-                sum += (temp % 10) * (temp % 10);
+                sum += (temp % 10)*(temp % 10);
                 temp /= 10;
                 boolean flag = true;
             } while (temp > 0);   
