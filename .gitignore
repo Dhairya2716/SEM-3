@@ -9,3 +9,11 @@
 /Data-Structure/LECTURE
 *.json
 /Oracle_JDK-22
+/Web-Technology/LAB/React/index
+/Web-Technology/LAB/React/demo/public
+/Web-Technology/LAB/React/event_handling/public
+/Web-Technology/LAB/React/event_handling/src/*.css
+*.svg
+*.gitignore
+*.md
+*.ico
