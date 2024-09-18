@@ -1,7 +1,8 @@
 export default function Click(){
-    function Click(){
+
+    function A(){
         alert("hello")
     }
 
-    return <button onClick={Click}>Click here!</button>
+    return <button onClick={A}>Click here!</button>
 }

@@ -43,9 +43,9 @@ public class treearray {
 
     private void printinorder(Node temp) {
         if (temp != null) {
-            printpreorder(temp.left);
+            printinorder(temp.left);
             System.out.print(temp.data + " ");
-            printpreorder(temp.right);
+            printinorder(temp.right);
         }
     }
 
@@ -55,8 +55,8 @@ public class treearray {
 
     private void printpostorder(Node temp) {
         if (temp != null) {
-            printpreorder(temp.left);
-            printpreorder(temp.right);
+            printpostorder(temp.left);
+            printpostorder(temp.right);
             System.out.print(temp.data + " ");
         }
     }
@@ -66,7 +66,7 @@ public class treearray {
     }
 
     public static void main(String[] args) {
-        int arr[] = {50, 25, 75, 22, 40, 15, 30, 60, 80, 90};
+        int arr[] = {1, 2, 5, 3, 8, 3};
         treearray tree = new treearray(arr);
         tree.printpreorder();
         System.out.println(" ");
