@@ -11,9 +11,16 @@
 /Oracle_JDK-22
 /Web-Technology/LAB/React/index
 /Web-Technology/LAB/React/demo/public
+/Web-Technology/LAB/React/project/public
+/Web-Technology/LAB/React/server/public
 /Web-Technology/LAB/React/event_handling/public
 /Web-Technology/LAB/React/event_handling/src/*.css
 *.svg
 *.gitignore
 *.md
 *.ico
+/Web-Technology/LAB/React/bootstrap-5.0.2-dist
+/Web-Technology/LAB/React/ecommerce
+*.axios
+C:\Users\WELCOME\Desktop\Coding\SEM-3\Web-Technology\LAB\React\bootstrap-5.0.2-dist
+/Web-Technology/LAB/React/mongos
